@@ -1,0 +1,62 @@
+:host {
+    display: block;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.table-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    overflow: hidden; /* Ensures border-radius applies to table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background-color: #f8f9fa; /* Light grey header */
+    border-bottom: 2px solid #dee2e6;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e9ecef;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 12px 15px;
+    color: #333;
+    font-size: 0.95em;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5; /* Slight hover effect */
+}
+
+/* Style for empty data message */
+tbody tr td[colspan="3"] {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}

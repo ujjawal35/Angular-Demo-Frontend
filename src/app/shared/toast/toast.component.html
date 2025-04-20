@@ -1,0 +1,4 @@
+<div class="toast-container" [class.show]="toastState.show" [ngClass]="'toast-' + toastState.type">
+  <span class="toast-message">{{ toastState.message }}</span>
+  <button class="close-button" (click)="closeToast()">&times;</button>
+</div>

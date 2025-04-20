@@ -1,0 +1,6 @@
+.main-content {
+  margin-left: 80px; /* Same as sidebar width */
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}

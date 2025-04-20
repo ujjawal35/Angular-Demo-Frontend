@@ -1,0 +1,22 @@
+<h3>Oil Production Data</h3>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Well Name</th>
+        <th>Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of productionData">
+        <td>{{ data.date }}</td>
+        <td>{{ data.wellName }}</td>
+        <td>{{ data.region }}</td>
+      </tr>
+      <tr *ngIf="!productionData || productionData.length === 0">
+        <td colspan="3">No data available.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

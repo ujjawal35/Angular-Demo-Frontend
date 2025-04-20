@@ -1,0 +1,240 @@
+:host {
+    display: block;
+    padding: 20px;
+}
+
+.header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title { 
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+.breadcrumbs { 
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 500;
+}
+
+.filters-card { 
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.filters-form .form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.filters-form .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters-form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.filters-form input[type="date"],
+.filters-form input[type="text"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.filters-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-actions { 
+    margin-top: 10px;
+}
+
+.submit-button { 
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover { 
+    background-color: #0056b3;
+}
+
+
+.form-error-row {
+    margin-top: -10px; 
+    margin-bottom: 15px;
+}
+
+.form-error-row .error-message {
+    width: 100%; 
+    text-align: center; 
+}
+
+.data-display-grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+        "table map"
+        "chart chart"; 
+    gap: 30px;
+    align-items: stretch; 
+}
+
+.data-table-card {
+    grid-area: table;
+    height: fit-content; 
+}
+
+.map-card {
+    grid-area: map;
+}
+
+.chart-card {
+    grid-area: chart; 
+    height: 350px; 
+}
+
+.data-table { 
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td { 
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th { 
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #444;
+}
+
+.data-table tbody tr:last-child td { 
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover { 
+    background-color: #f1f1f1;
+}
+
+.chart-card,
+.map-card {
+    position: relative; 
+}
+
+.chart-container { 
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px); 
+}
+
+.chart-card ngx-charts-line-chart { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.map-container { 
+    flex-grow: 1;
+    width: 100%;
+    height: 100%; 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.map-card .leaflet-container { 
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+.api-error-message {
+  background-color: #f8d7da; 
+  color: #721c24; 
+  border: 1px solid #f5c6cb; 
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-top: 15px; 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+
+.api-error-message i {
+  font-size: 1.2em;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.1em;
+  color: #666;
+}
+
+.no-data-message {
+   text-align: center;
+   padding: 30px;
+   font-size: 1.1em;
+   color: #666;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.table-scroll-wrapper {
+  max-height: 360px; 
+  overflow-y: auto;  
+  position: relative; 
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

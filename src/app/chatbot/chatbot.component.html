@@ -1,0 +1,33 @@
+<div class="chatbot-container" [class.open]="isOpen">
+  <button class="chat-toggle-button" *ngIf="!isOpen" (click)="toggleChat()">
+    <i class="material-icons">chat_bubble</i>
+  </button>
+
+  <div class="chat-window" *ngIf="isOpen">
+    <div class="chat-header">
+      <span>Chatbot</span>
+      <button class="close-button" (click)="toggleChat()">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+
+    <div class="chat-messages">
+      <div *ngFor="let message of messages" 
+           class="message" 
+           [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+        {{ message.text }}
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input 
+        type="text" 
+        [(ngModel)]="userInput" 
+        [placeholder]="placeholder" 
+        (keyup.enter)="sendMessage()">
+      <button class="send-button" (click)="sendMessage()">
+        <i class="material-icons">send</i>
+      </button>
+    </div>
+  </div>
+</div>
